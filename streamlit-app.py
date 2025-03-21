@@ -23,7 +23,7 @@ def load_cached_model():
 
 model = load_cached_model()
 
-st.title("Rita en siffra mellan 0-9 och låt modellen gissa! (Draw a digit between 0-9 and let the model guess!)")
+st.title("Rita en siffra mellan 0-9 och låt modellen gissa!")
 
 # Skapa en canvas för att rita siffror
 canvas_result = st_canvas(
