@@ -5,8 +5,17 @@ import joblib
 import cv2
 from streamlit_drawable_canvas import st_canvas
 
-# Ladda den sparade rf modellen 
-model = joblib.load("best_rf_model.pkl")
+# Cachea modellen så att den inte laddas om varje gång
+@st.cache_resource
+def load_cached_model():
+    # Google Drive fil-ID för din modell
+    file_id = '1DftgO3YjlxBxLOP4Nsy6AsNH7_1W1AAz'  # Nytt Fil-ID från din Google Drive-länk
+    url = f'https://drive.google.com/uc?export=download&id={file_id}'  # Omvandla till rätt URL
+    output = 'best_rf_model.pkl'
+ 
+    # Ladda ner modellen om den inte finns lokalt
+    if not os.path.exists(output):
+        gdown.download(url, output, quiet=False)
 
 
 st.title("Rita en siffra och låt modellen gissa!")
