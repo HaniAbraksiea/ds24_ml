@@ -1,0 +1,10 @@
+gdown
+tensorflow
+streamlit
+joblib
+numpy
+pandas
+lightgbm
+pillow
+scikit-learn
+streamlit-drawable-canvas
