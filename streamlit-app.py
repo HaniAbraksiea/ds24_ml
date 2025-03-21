@@ -5,7 +5,7 @@ import joblib
 import cv2
 from streamlit_drawable_canvas import st_canvas
 
-# Ladda den sparade SVC modellen 
+# Ladda den sparade rf modellen 
 model = joblib.load("best_rf_model.pkl")
 
 
