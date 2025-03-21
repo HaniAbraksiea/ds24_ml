@@ -8,3 +8,4 @@ lightgbm
 pillow
 scikit-learn
 streamlit-drawable-canvas
+opencv-python
